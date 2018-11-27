@@ -99,7 +99,7 @@ client.on("guildMemberAdd", member => {
      let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)
 .addField(' البنق🚀 ',`[${Date.now() - message.createdTimestamp}]`) 
-.addField('مصمم  + صاحب البوت ',`-----»BøX Ňø`)
+.addField('مصمم  + صاحب البوت ',`! ZA ĎAŘBĂKĂ`)
 .setColor('#027aff')
   message.channel.sendEmbed(embed);
     }
