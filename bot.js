@@ -535,7 +535,7 @@ if(!message.guild.member(client.user).hasPermission("MANAGE_ROLES")) return mess
         let support = message.guild.roles.find("name","Support Team");
         let ticketsStation = message.guild.channels.find("name", "TICKETS");
         if(!args) {
-            return message.channel.send('**( $new <السبب> )**');
+            return message.channel.send('**( +new <السبب> )**');
         };
                 if(!support) {
                     return message.channel.send('**Please make sure that `Support Team` role exists and it\'s not duplicated.**');
@@ -571,7 +571,7 @@ if(!message.guild.member(client.user).hasPermission("MANAGE_ROLES")) return mess
                                 ticket.sendEmbed(embed);
                 }) .catch();
     }
-    if(message.content.startsWith('$close')) {
+    if(message.content.startsWith('+close')) {
             if(!message.member.hasPermission("ADMINISTRATOR")) return;
         if(!message.channel.name.startsWith("ticket")) {
             return;
@@ -615,7 +615,7 @@ if(!message.guild.member(client.user).hasPermission("MANAGE_ROLES")) return mess
 //الاي دي
 
 client.on('message', message => {
-    var prefix = ""
+    var prefix = "+"
 var args = message.content.split(" ").slice(1);    
 if(message.content.startsWith(prefix + 'id')) {
 var year = message.author.createdAt.getFullYear()
